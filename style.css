@@ -1,0 +1,185 @@
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Gotham', sans-serif;
+  color: #666;
+  background: #F6F6F6;
+}
+
+/* Navbar: some details here, also styled through bootstrap labels */
+.navbar {
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding-left: 3rem !important;
+  padding-right: 3rem;
+  position: relative !important;
+}
+
+.navbar-nav ul a{
+  color: white !important;
+  }
+
+/* Main styling */
+body {
+  z-index: 1;
+  background-image: linear-gradient(rgb(190, 35, 113) , rgb(33, 12, 219));
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  text-align: center;
+  width: 100%;
+  /* Set the min height to the size of any screen */
+  min-height: 100vh;  
+  margin: 0 auto;
+}
+
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Cards: the results containers for content from the api */
+.cardContainer {
+  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+.card {
+  margin: 1rem;
+  max-width: 30rem;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all .2s linear;
+}
+
+/*TODO make hover image opaque/increase brightness*/
+.card:hover {
+  box-shadow: 2px 8px 45px rgba(73, 8, 48, 0.15);
+  transform: translate3D(-5px, -6px, 0);
+  background-image: url("images/kisspng-grateful-dead-logo-steal-your-face-live-album-musi-5b0185dc28d697.0229179315268264601673.png");
+  text-decoration: none !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 1px) {
+  .card {
+    flex: 1 1 calc(100% - 30px);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .card {
+    flex: 1 1 calc(50% - 30px);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .card {
+    flex: 1 1 calc(33% - 50px);
+  }
+}
+
+/* Content: the images and words within the cards */
+.content {
+  background-color: rgb(240, 178, 248);
+  padding: 5rem;
+  opacity: 0.5;
+  filter: alpha(opacity=20);
+        }
+
+.content:hover {
+  opacity: 0.80;
+  filter: alpha(opacity=80);
+}
+
+/* Main content, page text */
+h1 {
+  text-align: center;
+  padding: 4px 4px;
+  margin: 0 0 3px 0;
+  font-size: 20px;
+  color: white;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  background-image: linear-gradient(120deg, #d40c48 0%, #1345eb 100%);
+}
+
+h2 {
+  position: sticky;
+  margin-left: 6rem;
+  margin-right: 6rem;
+  text-align: left;
+  color: rgb(8, 0, 0);
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+h3 {
+  margin-left: 6rem;
+  margin-right: 6rem;
+  font-size: 18px;
+  /* padding: 1rem; */
+  text-align: left;
+  color: rgb(8, 0, 0);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.p2 {
+  /* padding: 0 4px 4px; */
+  margin-left: 6rem;
+  margin-right: 6rem;
+  text-align: left;
+  color: rgb(8, 0, 0);
+  border: 2pt white;
+  border-radius: 5px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p {
+  padding: 0 4px 4px;
+  margin-bottom: 1rem;
+  color: rgb(8, 0, 0);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 12pt;
+}
+
+img {
+  display: block;
+  margin: 3px auto;
+  max-width: 100%;
+}
+
+/* Other Elements */
+.selTable {
+  top: 0;
+  position: -webkit-sticky; /* Safari */
+}
+
+.selContainer {
+  display:inline-block;
+  margin-left: 40px;
+}
+
+.other {
+            float: center;
+        }
+
+iframe {
+  align-content: left;
+  
+  margin-left: 6rem;
+  margin-bottom: 1rem;
+  /* padding: 1rem; */
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 70%;
+  background-image: url("https://cdn.pixabay.com/photo/2016/11/11/20/05/wave-1817646_960_720.png");
+  color: white;
+  text-align: center;
+  margin-top: 5rem;
+}
