@@ -31,6 +31,19 @@ body {
   margin: 0 auto;
 }
 
+/* show body */
+.bodyShow {
+  z-index: 1;
+  background-image: linear-gradient(rgb(190, 35, 113) , rgb(33, 12, 219));
+  animation: colorRotate 50s linear infinite;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  text-align: center;
+  width: 100%;
+  /* Set the min height to the size of any screen */
+  min-height: 100vh;  
+  margin: 0 auto;
+}
+
 .main {
   max-width: 1000px;
   margin: auto;
@@ -123,7 +136,7 @@ h3 {
   /* padding: 1rem; */
   text-align: left;
   color: rgb(8, 0, 0);
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 .p2 {
@@ -167,9 +180,8 @@ img {
         }
 
 iframe {
-  align-content: left;
-  
-  margin-left: 6rem;
+  max-width: 75%;
+  /* margin-left: 6rem; */
   margin-bottom: 1rem;
   /* padding: 1rem; */
 }
@@ -178,8 +190,21 @@ iframe {
   position: fixed;
   bottom: 0;
   width: 70%;
-  background-image: url("https://cdn.pixabay.com/photo/2016/11/11/20/05/wave-1817646_960_720.png");
   color: white;
   text-align: center;
   margin-top: 5rem;
+
+}
+
+.logo {
+  animation: colorRotate 4s linear infinite;
+  width: 70%;
+  height: 20%;
+  position: relative;
+}
+
+@keyframes colorRotate {
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+  }
 }
